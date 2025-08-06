@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Arnav Sharma | Quant Finance Projects</title>
+  <style>
+    :root {
+      --bg: #181a20;
+      --card: #23272f;
+      --text: #eeeeee;
+      --accent: #32c3fa;
+      --muted: #888a92;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      line-height: 1.6;
+    }
+    header {
+      margin-top: 60px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    h1 {
+      letter-spacing: -1px;
+      font-size: 2.4rem;
+      margin-bottom: 0;
+      color: var(--accent);
+    }
+    p.lead {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-top: 8px;
+      margin-bottom: 0;
+    }
+    section {
+      margin-bottom: 32px;
+      width: 92vw;
+      max-width: 570px;
+    }
+    .projects {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .project-card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 20px 24px;
+      transition: box-shadow 0.2s;
+      box-shadow: 0 1px 8px #0002;
+      border-left: 3px solid var(--accent);
+    }
+    .project-card:hover {
+      box-shadow: 0 4px 32px #14adff20;
+      border-left: 3px solid #fff;
+    }
+    .project-card h3 {
+      margin: 0 0 5px 0;
+      font-size: 1.16rem;
+    }
+    .project-card p {
+      margin: 0 0 0 0;
+      color: var(--muted);
+    }
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 18px;
+    }
+    .links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 1.25rem;
+      transition: color 0.15s;
+    }
+    .links a:hover {
+      color: #fff;
+    }
+    @media (max-width: 650px) {
+      section {
+        max-width: 90vw;
+        padding: 0 5vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Arnav Sharma </h1>
+    <p class="lead">Quant Finance Learner & Project Showcase</p>
+    <div class="links">
+      <a href="https://github.com/FREAKO01" aria-label="GitHub">GitHub</a>
+      <a href="mailto:your@email.com" aria-label="Email">contact@arnavsharma.me</a>
+    </div>
+  </header>
+
+  <section>
+    <h2 style="font-size:1.4rem; margin-bottom: 14px; color:var(--text); font-weight:600;">Featured Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>
+          <a href="https://github.com/yourusername/project1" style="color:inherit; text-decoration:none;">
+            Algorithmic Trading Bot
+          </a>
+        </h3>
+        <p>Automated trading bot implementing mean reversion and momentum strategies. Python, pandas, and backtesting included.</p>
+      </div>
+      <div class="project-card">
+        <h3>
+          <a href="https://github.com/yourusername/project2" style="color:inherit; text-decoration:none;">
+            Option Pricing Dashboard
+          </a>
+        </h3>
+        <p>Interactive dashboard visualizing Black-Scholes option pricing and Greeks. Built with Streamlit and Plotly.</p>
+      </div>
+      <!-- Add more projects as needed -->
+    </div>
+  </section>
+
+  <footer style="margin:50px 0 20px 0; color:var(--muted); text-align:center; font-size:.96rem;">
+    &copy; 2025 Your Name. Built for GitHub Pages.
+  </footer>
+</body>
+</html>
