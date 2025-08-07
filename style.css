@@ -248,13 +248,12 @@ body {
     width: 100%;
 }
 
-/* --- FIX IMPLEMENTED HERE --- */
 .code-header {
     background: var(--dark-gray);
     padding: 12px 16px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* This correctly places dots on the left and filename on the right */
+    justify-content: space-between;
     border-bottom: 1px solid var(--border-gray);
 }
 
@@ -275,18 +274,11 @@ body {
 .dots span:nth-child(2) { background: #ffbd2e; }
 .dots span:nth-child(3) { background: #28ca42; }
 
-#model-name { /* Target the unique ID to style the filename */
+#model-name {
     color: var(--text-gray);
     font-size: 0.9rem;
-    flex-shrink: 0; /* Prevents the filename from shrinking */
-    text-align: right; /* Aligns the filename text to the right corner */
-}
-
-.code-header span {
-    color: var(--text-gray);
-    font-size: 0.9rem;
-    flex-shrink: 0; /* Prevents the filename from shrinking */
-    text-align: right; /* Aligns the filename text to the right corner */
+    flex-shrink: 0;
+    text-align: right;
 }
 
 .code-content {
@@ -295,9 +287,8 @@ body {
     font-size: 0.9rem;
     line-height: 1.6;
     transition: opacity 0.3s ease;
-    min-height: 150px; /* Added to give a fixed height and prevent content from overlapping as it changes */
+    min-height: 200px;
 }
-/* --- END OF FIX --- */
 
 .keyword { color: #ff79c6; }
 .variable { color: var(--cyan-primary); }
