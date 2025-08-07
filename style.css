@@ -255,11 +255,13 @@ body {
     align-items: center;
     gap: 12px;
     border-bottom: 1px solid var(--border-gray);
+    justify-content: space-between; /* Added to fix spacing */
 }
 
 .dots {
     display: flex;
     gap: 6px;
+    flex-shrink: 0; /* Prevent dots from shrinking */
 }
 
 .dots span {
@@ -276,8 +278,12 @@ body {
 .code-header span {
     color: var(--text-gray);
     font-size: 0.9rem;
-    margin-left: auto;
+    margin-left: 0; /* Remove auto margin */
+    flex-shrink: 0; /* Prevent filename from shrinking */
+    text-align: center; /* Center the filename */
+    flex: 1; /* Take remaining space */
 }
+
 
 .code-content {
     padding: 24px;
