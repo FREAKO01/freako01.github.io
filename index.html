@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arnav Sharma - Portfolio</title>
+    <title>Arnav Sharma - Quantitative Researcher & Developer</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,7 +16,8 @@
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#models" class="nav-link">Quant Models</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -33,11 +34,11 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Hi, I'm <span class="highlight">Arnav Sharma</span></h1>
-                <h2 class="typing-text">Full Stack Developer</h2>
-                <p>Passionate about creating innovative solutions and building amazing digital experiences with modern technologies.</p>
+                <h2 class="typing-text">Quantitative Researcher</h2>
+                <p>Passionate about financial markets, algorithmic trading, and building sophisticated quantitative models to decode market behavior and optimize investment strategies.</p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn primary">View My Work</a>
-                    <a href="mailto:contact@arnavsharma.me" class="btn secondary">Get In Touch</a>
+                    <a href="#models" class="btn primary">View Quant Models</a>
+                    <a href="mailto:contact@arnavsharma.me" class="btn secondary">Collaborate</a>
                 </div>
                 <div class="social-links">
                     <a href="https://github.com/FREAKO01" target="_blank" aria-label="GitHub">
@@ -59,14 +60,15 @@
                             <span></span>
                             <span></span>
                         </div>
-                        <span>welcome.js</span>
+                        <span>black_scholes.py</span>
                     </div>
                     <div class="code-content">
-                        <p><span class="keyword">const</span> <span class="variable">developer</span> = {</p>
-                        <p>&nbsp;&nbsp;<span class="property">name:</span> <span class="string">"Arnav Sharma"</span>,</p>
-                        <p>&nbsp;&nbsp;<span class="property">passion:</span> <span class="string">"Innovation"</span>,</p>
-                        <p>&nbsp;&nbsp;<span class="property">code:</span> <span class="function">() => 'Amazing'</span></p>
-                        <p>};</p>
+                        <p><span class="keyword">import</span> <span class="variable">numpy</span> <span class="keyword">as</span> <span class="variable">np</span></p>
+                        <p><span class="keyword">from</span> <span class="variable">scipy.stats</span> <span class="keyword">import</span> <span class="variable">norm</span></p>
+                        <p>&nbsp;</p>
+                        <p><span class="keyword">def</span> <span class="function">black_scholes</span>(<span class="variable">S, K, T, r, sigma</span>):</p>
+                        <p>&nbsp;&nbsp;<span class="property">d1</span> = <span class="function">calculate_d1</span>(<span class="variable">S, K, T, r, sigma</span>)</p>
+                        <p>&nbsp;&nbsp;<span class="keyword">return</span> <span class="variable">S</span> * <span class="function">norm.cdf</span>(<span class="variable">d1</span>)</p>
                     </div>
                 </div>
             </div>
@@ -79,21 +81,224 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm a passionate developer who loves turning complex problems into simple, elegant solutions. With a strong foundation in modern web technologies, I focus on creating efficient, scalable applications that make a difference.</p>
+                    <p>I'm a quantitative researcher and developer specializing in financial modeling, algorithmic trading, and risk management. My work focuses on creating sophisticated mathematical models to understand market dynamics, price derivatives, and develop systematic trading strategies.</p>
                     <div class="stats-grid">
                         <div class="stat-item">
-                            <h3>50+</h3>
-                            <p>Projects</p>
+                            <h3>15+</h3>
+                            <p>Quant Models</p>
                         </div>
                         <div class="stat-item">
                             <h3>3+</h3>
-                            <p>Years</p>
+                            <p>Years Experience</p>
                         </div>
                         <div class="stat-item">
                             <h3>500+</h3>
-                            <p>Commits</p>
+                            <p>Backtests Run</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quantitative Models Section -->
+    <section id="models" class="projects">
+        <div class="container">
+            <h2 class="section-title">Quantitative Models</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Black-Scholes Model</h3>
+                        <p>Complete implementation of the Black-Scholes option pricing model with Greeks calculation, volatility surface analysis, and real-time pricing for European options.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>NumPy</span>
+                            <span>SciPy</span>
+                            <span>Matplotlib</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/FREAKO01/black-scholes-model" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" target="_blank" class="project-link">
+                                <i class="fas fa-play"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-wave-square"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Heston Stochastic Volatility Model</h3>
+                        <p>Advanced volatility modeling using the Heston model for option pricing with stochastic volatility, calibration algorithms, and Monte Carlo simulation methods.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>QuantLib</span>
+                            <span>Pandas</span>
+                            <span>Monte Carlo</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/FREAKO01/heston-model" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" target="_blank" class="project-link">
+                                <i class="fas fa-play"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-dice"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Monte Carlo Simulation Suite</h3>
+                        <p>Comprehensive Monte Carlo simulation framework for option pricing, portfolio optimization, and risk assessment with variance reduction techniques.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>NumPy</span>
+                            <span>Numba</span>
+                            <span>Multiprocessing</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/FREAKO01/monte-carlo-finance" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" target="_blank" class="project-link">
+                                <i class="fas fa-play"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-chart-area"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Volatility Surface Analysis</h3>
+                        <p>Advanced volatility modeling toolkit with implied volatility surface construction, term structure analysis, and volatility smile fitting algorithms.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>SciPy</span>
+                            <span>Plotly</span>
+                            <span>Statistics</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/FREAKO01/volatility-surface" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" target="_blank" class="project-link">
+                                <i class="fas fa-play"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Algorithmic Trading Bot</h3>
+                        <p>Systematic trading system with multiple strategies, risk management, backtesting framework, and real-time execution capabilities for equity markets.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>Backtrader</span>
+                            <span>API Integration</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/FREAKO01/algo-trading-bot" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" target="_blank" class="project-link">
+                                <i class="fas fa-shield-alt"></i> Private
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Risk Analytics</h3>
+                        <p>Comprehensive risk management system with VaR calculation, stress testing, correlation analysis, and portfolio optimization using modern portfolio theory.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>PyPortfolioOpt</span>
+                            <span>Risk Metrics</span>
+                            <span>Optimization</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/FREAKO01/portfolio-risk-analytics" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" target="_blank" class="project-link">
+                                <i class="fas fa-play"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="achievements">
+        <div class="container">
+            <h2 class="section-title">Research & Expertise</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Options Pricing</h3>
+                    <p>Black-Scholes, Heston, and exotic options modeling with advanced numerical methods</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-wave-square"></i>
+                    <h3>Volatility Modeling</h3>
+                    <p>Stochastic volatility models, GARCH, and volatility surface construction</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-dice"></i>
+                    <h3>Monte Carlo Methods</h3>
+                    <p>Advanced simulation techniques with variance reduction and parallel computing</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>Algorithmic Trading</h3>
+                    <p>Systematic trading strategies, backtesting, and risk management systems</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Risk Management</h3>
+                    <p>Portfolio optimization, VaR modeling, and stress testing methodologies</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Machine Learning</h3>
+                    <p>ML applications in finance, feature engineering, and predictive modeling</p>
                 </div>
             </div>
         </div>
@@ -105,119 +310,47 @@
             <h2 class="section-title">Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Frontend</h3>
+                    <h3>Programming Languages</h3>
                     <div class="skill-items">
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Next.js</span>
-                        <span class="skill-tag">TypeScript</span>
-                        <span class="skill-tag">Tailwind CSS</span>
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Node.js</span>
                         <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Express.js</span>
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">MATLAB</span>
+                        <span class="skill-tag">JavaScript</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Tools & Others</h3>
+                    <h3>Quantitative Libraries</h3>
                     <div class="skill-items">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">Figma</span>
-                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">SciPy</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">QuantLib</span>
+                        <span class="skill-tag">PyPortfolioOpt</span>
+                        <span class="skill-tag">Zipline</span>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-code"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Project One</h3>
-                        <p>A modern web application built with React and Node.js featuring real-time functionality and responsive design.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/FREAKO01" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="#" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div>
+                <div class="skill-category">
+                    <h3>Financial Modeling</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Black-Scholes</span>
+                        <span class="skill-tag">Monte Carlo</span>
+                        <span class="skill-tag">Stochastic Calculus</span>
+                        <span class="skill-tag">Options Pricing</span>
+                        <span class="skill-tag">Risk Metrics</span>
+                        <span class="skill-tag">Portfolio Theory</span>
                     </div>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Project Two</h3>
-                        <p>Cross-platform mobile application with modern UI/UX and backend integration for seamless user experience.</p>
-                        <div class="project-tech">
-                            <span>React Native</span>
-                            <span>Firebase</span>
-                            <span>TypeScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/FREAKO01" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="#" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-database"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Project Three</h3>
-                        <p>Full-stack application with advanced data visualization and analytics dashboard for business insights.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Django</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/FREAKO01" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="#" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div>
+                <div class="skill-category">
+                    <h3>Data & Visualization</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Plotly</span>
+                        <span class="skill-tag">Seaborn</span>
+                        <span class="skill-tag">Bloomberg API</span>
+                        <span class="skill-tag">Yahoo Finance</span>
+                        <span class="skill-tag">Alpha Vantage</span>
                     </div>
                 </div>
             </div>
@@ -227,11 +360,11 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Let's Work Together</h2>
+            <h2 class="section-title">Let's Collaborate</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <p>I'm always interested in new opportunities and exciting projects. Let's discuss how we can bring your ideas to life.</p>
+                    <h3>Ready to Build Something Great?</h3>
+                    <p>I'm always interested in discussing quantitative finance, algorithmic trading strategies, and innovative financial modeling projects. Let's connect and explore opportunities.</p>
                     <div class="contact-methods">
                         <a href="mailto:contact@arnavsharma.me" class="contact-method">
                             <i class="fas fa-envelope"></i>
@@ -255,10 +388,10 @@
                         <input type="email" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="subject" placeholder="Subject" required>
+                        <input type="text" name="subject" placeholder="Subject (e.g., Collaboration Opportunity)" required>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <textarea name="message" placeholder="Tell me about your project or collaboration idea..." rows="5" required></textarea>
                     </div>
                     <button type="submit" class="btn primary">Send Message</button>
                 </form>
@@ -269,7 +402,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Arnav Sharma. Built with passion and modern web technologies.</p>
+            <p>&copy; 2025 Arnav Sharma. Quantitative Research & Financial Modeling.</p>
         </div>
     </footer>
 
