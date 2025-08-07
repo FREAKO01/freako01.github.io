@@ -300,43 +300,11 @@ window.addEventListener('scroll', () => {
 
 // Enhanced code block animation with financial formulas rotation
 function updateCodeBlock() {
-    const codeContent = document.querySelector('.code-content');
+    const codeContent = document.getElementById('code-snippet'); // Corrected selector
     if (!codeContent) return;
     
     const financialFormulas = [
-        {
-            filename: 'black_scholes.py',
-            code: [
-                '<span class="keyword">import</span> <span class="variable">numpy</span> <span class="keyword">as</span> <span class="variable">np</span>',
-                '<span class="keyword">from</span> <span class="variable">scipy.stats</span> <span class="keyword">import</span> <span class="variable">norm</span>',
-                '&nbsp;',
-                '<span class="keyword">def</span> <span class="function">black_scholes</span>(<span class="variable">S, K, T, r, sigma</span>):',
-                '&nbsp;&nbsp;<span class="property">d1</span> = <span class="function">calculate_d1</span>(<span class="variable">S, K, T, r, sigma</span>)',
-                '&nbsp;&nbsp;<span class="keyword">return</span> <span class="variable">S</span> * <span class="function">norm.cdf</span>(<span class="variable">d1</span>)'
-            ]
-        },
-        {
-            filename: 'monte_carlo.py',
-            code: [
-                '<span class="keyword">import</span> <span class="variable">numpy</span> <span class="keyword">as</span> <span class="variable">np</span>',
-                '&nbsp;',
-                '<span class="keyword">def</span> <span class="function">monte_carlo_price</span>(<span class="variable">S0, K, T, r, sigma, N</span>):',
-                '&nbsp;&nbsp;<span class="property">z</span> = <span class="variable">np</span>.<span class="function">random.normal</span>(<span class="variable">0, 1, N</span>)',
-                '&nbsp;&nbsp;<span class="property">ST</span> = <span class="variable">S0</span> * <span class="function">np.exp</span>(<span class="variable">drift * z</span>)',
-                '&nbsp;&nbsp;<span class="keyword">return</span> <span class="function">np.mean</span>(<span class="function">np.maximum</span>(<span class="variable">ST - K, 0</span>))'
-            ]
-        },
-        {
-            filename: 'heston_model.py',
-            code: [
-                '<span class="keyword">import</span> <span class="variable">numpy</span> <span class="keyword">as</span> <span class="variable">np</span>',
-                '&nbsp;',
-                '<span class="keyword">def</span> <span class="function">heston_simulation</span>(<span class="variable">kappa, theta, xi, rho</span>):',
-                '&nbsp;&nbsp;<span class="property">v_next</span> = <span class="variable">v</span> + <span class="variable">kappa</span> * (<span class="variable">theta</span> - <span class="variable">v</span>) * <span class="variable">dt</span>',
-                '&nbsp;&nbsp;<span class="property">S_next</span> = <span class="variable">S</span> * <span class="function">np.exp</span>(<span class="variable">mu * dt</span> + <span class="function">np.sqrt</span>(<span class="variable">v * dt</span>) * <span class="variable">dW</span>)',
-                '&nbsp;&nbsp;<span class="keyword">return</span> <span class="variable">S_next, v_next</span>'
-            ]
-        }
+        // ... (your financialFormulas array) ...
     ];
     
     let currentFormulaIndex = 0;
@@ -344,11 +312,11 @@ function updateCodeBlock() {
     // Rotate through different financial formulas every 10 seconds
     setInterval(() => {
         const formula = financialFormulas[currentFormulaIndex];
-        const header = document.querySelector('.code-header span');
+        const modelNameElement = document.getElementById('model-name'); // Corrected selector
         
-        if (header) {
+        if (modelNameElement) {
             // Update filename
-            header.textContent = formula.filename;
+            modelNameElement.textContent = formula.filename;
             
             // Update code content with fade effect
             codeContent.style.opacity = '0';
@@ -361,6 +329,7 @@ function updateCodeBlock() {
         
         currentFormulaIndex = (currentFormulaIndex + 1) % financialFormulas.length;
     }, 8000);
+}
 }
 
 // Initialize code block rotation
@@ -396,7 +365,6 @@ function handleIframeError() {
             this.parentNode.replaceChild(errorMsg, this);
         });
     }
-}
 
 // Initialize error handling
 document.addEventListener('DOMContentLoaded', handleIframeError);
