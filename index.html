@@ -1,134 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Arnav Sharma | Quant Finance Projects</title>
-  <style>
-    :root {
-      --bg: #181a20;
-      --card: #23272f;
-      --text: #eeeeee;
-      --accent: #32c3fa;
-      --muted: #888a92;
-    }
-    body {
-      margin: 0;
-      font-family: 'Inter', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      line-height: 1.6;
-    }
-    header {
-      margin-top: 60px;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-    h1 {
-      letter-spacing: -1px;
-      font-size: 2.4rem;
-      margin-bottom: 0;
-      color: var(--accent);
-    }
-    p.lead {
-      color: var(--muted);
-      font-size: 1.1rem;
-      margin-top: 8px;
-      margin-bottom: 0;
-    }
-    section {
-      margin-bottom: 32px;
-      width: 92vw;
-      max-width: 570px;
-    }
-    .projects {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .project-card {
-      background: var(--card);
-      border-radius: 12px;
-      padding: 20px 24px;
-      transition: box-shadow 0.2s;
-      box-shadow: 0 1px 8px #0002;
-      border-left: 3px solid var(--accent);
-    }
-    .project-card:hover {
-      box-shadow: 0 4px 32px #14adff20;
-      border-left: 3px solid #fff;
-    }
-    .project-card h3 {
-      margin: 0 0 5px 0;
-      font-size: 1.16rem;
-    }
-    .project-card p {
-      margin: 0 0 0 0;
-      color: var(--muted);
-    }
-    .links {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      margin-top: 18px;
-    }
-    .links a {
-      color: var(--accent);
-      text-decoration: none;
-      font-size: 1.25rem;
-      transition: color 0.15s;
-    }
-    .links a:hover {
-      color: #fff;
-    }
-    @media (max-width: 650px) {
-      section {
-        max-width: 90vw;
-        padding: 0 5vw;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arnav Sharma - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Arnav Sharma </h1>
-    <p class="lead">Quant Finance Learner & Project Showcase</p>
-    <div class="links">
-      <a href="https://github.com/FREAKO01" aria-label="GitHub">GitHub</a>
-      <a href="mailto:contact@arnavsharma.me" aria-label="Email">Email</a>
-    </div>
-  </header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Arnav Sharma</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
-  <section>
-    <h2 style="font-size:1.4rem; margin-bottom: 14px; color:var(--text); font-weight:600;">Featured Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <h3>
-          <a href="https://github.com/FREAKO01/project1" style="color:inherit; text-decoration:none;">
-            Algorithmic Trading Bot
-          </a>
-        </h3>
-        <p>Automated trading bot implementing mean reversion and momentum strategies. Python, pandas, and backtesting included.</p>
-      </div>
-      <div class="project-card">
-        <h3>
-          <a href="https://github.com/FREAKO01/project2" style="color:inherit; text-decoration:none;">
-            Option Pricing Dashboard
-          </a>
-        </h3>
-        <p>Interactive dashboard visualizing Black-Scholes option pricing and Greeks. Built with Streamlit and Plotly.</p>
-      </div>
-      <!-- Add more projects as needed -->
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="highlight">Arnav Sharma</span></h1>
+                <h2 class="typing-text">Full Stack Developer</h2>
+                <p>Passionate about creating innovative solutions and building amazing digital experiences with modern technologies.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary">View My Work</a>
+                    <a href="mailto:contact@arnavsharma.me" class="btn secondary">Get In Touch</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/FREAKO01" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/arnav-sharma" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:contact@arnavsharma.me" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-block">
+                    <div class="code-header">
+                        <div class="dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span>welcome.js</span>
+                    </div>
+                    <div class="code-content">
+                        <p><span class="keyword">const</span> <span class="variable">developer</span> = {</p>
+                        <p>&nbsp;&nbsp;<span class="property">name:</span> <span class="string">"Arnav Sharma"</span>,</p>
+                        <p>&nbsp;&nbsp;<span class="property">passion:</span> <span class="string">"Innovation"</span>,</p>
+                        <p>&nbsp;&nbsp;<span class="property">code:</span> <span class="function">() => 'Amazing'</span></p>
+                        <p>};</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer style="margin:50px 0 20px 0; color:var(--muted); text-align:center; font-size:.96rem;">
-    &copy; 2025 Arnav Sharma. Built for GitHub Pages.
-  </footer>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate developer who loves turning complex problems into simple, elegant solutions. With a strong foundation in modern web technologies, I focus on creating efficient, scalable applications that make a difference.</p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>3+</h3>
+                            <p>Years</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>500+</h3>
+                            <p>Commits</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">REST APIs</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Others</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Project One</h3>
+                        <p>A modern web application built with React and Node.js featuring real-time functionality and responsive design.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/FREAKO01" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Project Two</h3>
+                        <p>Cross-platform mobile application with modern UI/UX and backend integration for seamless user experience.</p>
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/FREAKO01" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-database"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Project Three</h3>
+                        <p>Full-stack application with advanced data visualization and analytics dashboard for business insights.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Django</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/FREAKO01" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Work Together</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Let's discuss how we can bring your ideas to life.</p>
+                    <div class="contact-methods">
+                        <a href="mailto:contact@arnavsharma.me" class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@arnavsharma.me</span>
+                        </a>
+                        <a href="https://github.com/FREAKO01" target="_blank" class="contact-method">
+                            <i class="fab fa-github"></i>
+                            <span>github.com/FREAKO01</span>
+                        </a>
+                        <a href="https://linkedin.com/in/arnav-sharma" target="_blank" class="contact-method">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Arnav Sharma. Built with passion and modern web technologies.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
