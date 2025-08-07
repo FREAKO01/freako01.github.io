@@ -56,6 +56,116 @@ function typeEffect() {
     setTimeout(typeEffect, typingSpeed);
 }
 
+// Project Code Snippets Cycling
+function initializeProjectCycling() {
+    const projectFilename = document.getElementById('project-filename');
+    const codeSnippet = document.getElementById('code-snippet');
+    
+    if (!projectFilename || !codeSnippet) return;
+    
+    const quantProjects = [
+        {
+            filename: 'black_scholes.py',
+            code: [
+                '<span class="keyword">import</span> <span class="variable">numpy</span> <span class="keyword">as</span> <span class="variable">np</span>',
+                '<span class="keyword">from</span> <span class="variable">scipy.stats</span> <span class="keyword">import</span> <span class="variable">norm</span>',
+                '&nbsp;',
+                '<span class="keyword">def</span> <span class="function">black_scholes</span>(<span class="variable">S, K, T, r, sigma</span>):',
+                '&nbsp;&nbsp;<span class="property">d1</span> = <span class="function">calculate_d1</span>(<span class="variable">S, K, T, r, sigma</span>)',
+                '&nbsp;&nbsp;<span class="keyword">return</span> <span class="variable">S</span> * <span class="function">norm.cdf</span>(<span class="variable">d1</span>)'
+            ]
+        },
+        {
+            filename: 'heston_model.py',
+            code: [
+                '<span class="keyword">import</span> <span class="variable">numpy</span> <span class="keyword">as</span> <span class="variable">np</span>',
+                '<span class="keyword">from</span> <span class="variable">scipy.integrate</span> <span class="keyword">import</span> <span class="variable">quad</span>',
+                '&nbsp;',
+                '<span class="keyword">def</span> <span class="function">heston_price</span>(<span class="variable">S0, K, T, r, v0, kappa, theta, xi, rho</span>):',
+                '&nbsp;&nbsp;<span class="property">char_func</span> = <span class="keyword">lambda</span> <span class="variable">u</span>: <span class="function">heston_char_func</span>(<span class="variable">u, S0, v0, r, kappa, theta, xi, rho, T</span>)',
+                '&nbsp;&nbsp;<span class="keyword">return</span> <span class="function">heston_call_price</span>(<span class="variable">S0, K, r, T, char_func</span>)'
+            ]
+        },
+        {
+            filename: 'monte_carlo.py',
+            code: [
+                '<span class="keyword">import</span> <span class="variable">numpy</span> <span class="keyword">as</span> <span class="variable">np</span>',
+                '<span class="keyword">from</span> <span class="variable">numba</span> <span class="keyword">import</span> <span class="variable">jit</span>',
+                '&nbsp;',
+                '<span class="variable">@jit</span>(<span class="property">nopython=True</span>)',
+                '<span class="keyword">def</span> <span class="function">monte_carlo_option</span>(<span class="variable">S0, K, T, r, sigma, n_sims</span>):',
+                '&nbsp;&nbsp;<span class="property">payoffs</span> = <span class="function">simulate_paths</span>(<span class="variable">S0, r, sigma, T, n_sims</span>)',
+                '&nbsp;&nbsp;<span class="keyword">return</span> <span class="function">np.exp</span>(<span class="variable">-r * T</span>) * <span class="function">np.mean</span>(<span class="function">np.maximum</span>(<span class="variable">payoffs - K, 0</span>))'
+            ]
+        },
+        {
+            filename: 'volatility_surface.py',
+            code: [
+                '<span class="keyword">import</span> <span class="variable">pandas</span> <span class="keyword">as</span> <span class="variable">pd</span>',
+                '<span class="keyword">from</span> <span class="variable">scipy.interpolate</span> <span class="keyword">import</span> <span class="variable">RBFInterpolator</span>',
+                '&nbsp;',
+                '<span class="keyword">def</span> <span class="function">build_vol_surface</span>(<span class="variable">strikes, expiries, implied_vols</span>):',
+                '&nbsp;&nbsp;<span class="property">surface</span> = <span class="function">RBFInterpolator</span>(<span class="variable">market_data, implied_vols</span>)',
+                '&nbsp;&nbsp;<span class="keyword">return</span> <span class="function">surface</span>(<span class="variable">strike_grid, time_grid</span>)'
+            ]
+        },
+        {
+            filename: 'algo_trading.py',
+            code: [
+                '<span class="keyword">import</span> <span class="variable">backtrader</span> <span class="keyword">as</span> <span class="variable">bt</span>',
+                '<span class="keyword">import</span> <span class="variable">pandas</span> <span class="keyword">as</span> <span class="variable">pd</span>',
+                '&nbsp;',
+                '<span class="keyword">class</span> <span class="function">MeanReversionStrategy</span>(<span class="variable">bt.Strategy</span>):',
+                '&nbsp;&nbsp;<span class="keyword">def</span> <span class="function">next</span>(<span class="variable">self</span>):',
+                '&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">signal</span> = <span class="function">self.calculate_signal</span>()',
+                '&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> <span class="variable">signal</span> > <span class="string">0.8</span>: <span class="function">self.buy</span>()'
+            ]
+        },
+        {
+            filename: 'risk_analytics.py',
+            code: [
+                '<span class="keyword">import</span> <span class="variable">numpy</span> <span class="keyword">as</span> <span class="variable">np</span>',
+                '<span class="keyword">from</span> <span class="variable">pypfopt</span> <span class="keyword">import</span> <span class="variable">EfficientFrontier</span>',
+                '&nbsp;',
+                '<span class="keyword">def</span> <span class="function">calculate_var</span>(<span class="variable">returns, confidence_level=0.95</span>):',
+                '&nbsp;&nbsp;<span class="property">sorted_returns</span> = <span class="function">np.sort</span>(<span class="variable">returns</span>)',
+                '&nbsp;&nbsp;<span class="property">index</span> = <span class="function">int</span>((<span class="string">1</span> - <span class="variable">confidence_level</span>) * <span class="function">len</span>(<span class="variable">returns</span>))',
+                '&nbsp;&nbsp;<span class="keyword">return</span> <span class="variable">sorted_returns</span>[<span class="variable">index</span>]'
+            ]
+        }
+    ];
+    
+    let currentProjectIndex = 0;
+    
+    function cycleProjects() {
+        const project = quantProjects[currentProjectIndex];
+        
+        // Add fade out effect
+        projectFilename.style.opacity = '0';
+        codeSnippet.style.opacity = '0';
+        
+        setTimeout(() => {
+            // Update filename
+            projectFilename.textContent = project.filename;
+            
+            // Update code content
+            codeSnippet.innerHTML = project.code.map(line => `<p>${line}</p>`).join('');
+            
+            // Fade back in
+            projectFilename.style.opacity = '1';
+            codeSnippet.style.opacity = '1';
+        }, 300);
+        
+        // Move to next project
+        currentProjectIndex = (currentProjectIndex + 1) % quantProjects.length;
+    }
+    
+    // Start cycling after initial delay
+    setTimeout(() => {
+        setInterval(cycleProjects, 4000); // Change every 4 seconds
+    }, 3000); // Initial 3 second delay
+}
+
 // Animated counter for stats
 function animateCounter(element, target) {
     let current = 0;
@@ -89,17 +199,14 @@ function initializeDashboard() {
         
         // Handle iframe interaction for better UX
         iframe.addEventListener('mouseenter', function() {
-            // Temporarily disable body scroll when interacting with iframe
             document.body.style.pointerEvents = 'none';
             iframe.style.pointerEvents = 'auto';
         });
         
         iframe.addEventListener('mouseleave', function() {
-            // Re-enable body scroll
             document.body.style.pointerEvents = 'auto';
         });
         
-        // Add click handler to focus iframe
         iframe.addEventListener('click', function() {
             this.focus();
         });
@@ -112,14 +219,12 @@ function initializeDashboardOverlay() {
     const overlay = document.querySelector('.dashboard-overlay');
     
     if (dashboardPreview && overlay) {
-        // Click overlay to launch dashboard in new tab
         overlay.addEventListener('click', function(e) {
             if (e.target === overlay || e.target.closest('.overlay-content')) {
                 window.open('https://quant-finance-dashboard-cxatahokgdtcs9vm8yjmlg.streamlit.app', '_blank');
             }
         });
         
-        // Add keyboard accessibility
         overlay.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
@@ -127,7 +232,6 @@ function initializeDashboardOverlay() {
             }
         });
         
-        // Make overlay focusable
         overlay.setAttribute('tabindex', '0');
         overlay.setAttribute('role', 'button');
         overlay.setAttribute('aria-label', 'Launch Interactive Dashboard');
@@ -143,7 +247,6 @@ function initializeDashboardAnimations() {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // Animate feature cards with stagger effect
                     featureCards.forEach((card, index) => {
                         setTimeout(() => {
                             card.style.opacity = '1';
@@ -162,15 +265,12 @@ function initializeDashboardAnimations() {
 function optimizeIframeLoading() {
     const iframe = document.querySelector('.dashboard-embed iframe');
     if (iframe) {
-        // Store original src
         const originalSrc = iframe.getAttribute('src');
         iframe.removeAttribute('src');
         
-        // Intersection Observer for lazy loading
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // Load iframe when it comes into view
                     iframe.setAttribute('src', originalSrc);
                     observer.unobserve(entry.target);
                 }
@@ -200,8 +300,9 @@ function initializeDashboardButtons() {
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize existing functionality
     typeEffect();
+    initializeProjectCycling(); // New project cycling functionality
     
-    // Initialize new dashboard functionality
+    // Initialize dashboard functionality
     initializeDashboard();
     initializeDashboardOverlay();
     initializeDashboardAnimations();
@@ -230,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Observe elements for scroll animations (including new dashboard elements)
+    // Observe elements for scroll animations
     document.querySelectorAll('.project-card, .skill-category, .stat-item, .achievement-card, .dashboard-preview').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
@@ -239,7 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Navbar background on scroll with financial theme
+// Navbar background on scroll
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 100) {
@@ -255,31 +356,23 @@ window.addEventListener('scroll', () => {
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Get form data
     const formData = new FormData(this);
     const name = formData.get('name');
     const email = formData.get('email');
     const subject = formData.get('subject');
     const message = formData.get('message');
     
-    // Create mailto link
     const mailtoLink = `mailto:contact@arnavsharma.me?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
     
-    // Open email client
     window.location.href = mailtoLink;
-    
-    // Show success message
     alert('Opening your email client... Looking forward to discussing quantitative finance with you!');
-    
-    // Reset form
     this.reset();
 });
 
-// Enhanced hover effects for project cards with financial animations
+// Enhanced hover effects for project cards
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mouseenter', function() {
         this.style.transform = 'translateY(-10px) scale(1.02)';
-        // Add subtle glow effect
         this.style.boxShadow = '0 15px 35px rgba(0, 255, 255, 0.2)';
     });
     
@@ -296,76 +389,6 @@ window.addEventListener('scroll', () => {
     if (heroContent) {
         heroContent.style.transform = `translateY(${scrolled * 0.2}px)`;
     }
-});
-
-// Enhanced code block animation with financial formulas rotation
-function updateCodeBlock() {
-    const codeContent = document.getElementById('code-snippet');
-    const modelNameElement = document.getElementById('model-name');
-    
-    if (!codeContent || !modelNameElement) return;
-    
-    const financialFormulas = [
-        {
-            filename: 'black_scholes.py',
-            code: [
-                '<span class="keyword">import</span> <span class="variable">numpy</span> <span class="keyword">as</span> <span class="variable">np</span>',
-                '<span class="keyword">from</span> <span class="variable">scipy.stats</span> <span class="keyword">import</span> <span class="variable">norm</span>',
-                '&nbsp;',
-                '<span class="keyword">def</span> <span class="function">black_scholes</span>(<span class="variable">S, K, T, r, sigma</span>):',
-                '&nbsp;&nbsp;<span class="property">d1</span> = <span class="function">calculate_d1</span>(<span class="variable">S, K, T, r, sigma</span>)',
-                '&nbsp;&nbsp;<span class="keyword">return</span> <span class="variable">S</span> * <span class="function">norm.cdf</span>(<span class="variable">d1</span>)'
-            ]
-        },
-        {
-            filename: 'monte_carlo.py',
-            code: [
-                '<span class="keyword">import</span> <span class="variable">numpy</span> <span class="keyword">as</span> <span class="variable">np</span>',
-                '&nbsp;',
-                '<span class="keyword">def</span> <span class="function">monte_carlo_price</span>(<span class="variable">S0, K, T, r, sigma, N</span>):',
-                '&nbsp;&nbsp;<span class="property">z</span> = <span class="variable">np</span>.<span class="function">random.normal</span>(<span class="variable">0, 1, N</span>)',
-                '&nbsp;&nbsp;<span class="property">ST</span> = <span class="variable">S0</span> * <span class="function">np.exp</span>(<span class="variable">drift * z</span>)',
-                '&nbsp;&nbsp;<span class="keyword">return</span> <span class="function">np.mean</span>(<span class="function">np.maximum</span>(<span class="variable">ST - K, 0</span>))'
-            ]
-        },
-        {
-            filename: 'heston_model.py',
-            code: [
-                '<span class="keyword">import</span> <span class="variable">numpy</span> <span class="keyword">as</span> <span class="variable">np</span>',
-                '&nbsp;',
-                '<span class="keyword">def</span> <span class="function">heston_simulation</span>(<span class="variable">kappa, theta, xi, rho</span>):',
-                '&nbsp;&nbsp;<span class="property">v_next</span> = <span class="variable">v</span> + <span class="variable">kappa</span> * (<span class="variable">theta</span> - <span class="variable">v</span>) * <span class="variable">dt</span>',
-                '&nbsp;&nbsp;<span class="property">S_next</span> = <span class="variable">S</span> * <span class="function">np.exp</span>(<span class="variable">mu * dt</span> + <span class="function">np.sqrt</span>(<span class="variable">v * dt</span>) * <span class="variable">dW</span>)',
-                '&nbsp;&nbsp;<span class="keyword">return</span> <span class="variable">S_next, v_next</span>'
-            ]
-        }
-    ];
-    
-    let currentFormulaIndex = 0;
-    
-    // Rotate through different financial formulas every 10 seconds
-    setInterval(() => {
-        const formula = financialFormulas[currentFormulaIndex];
-        
-        // Update filename
-        modelNameElement.textContent = formula.filename;
-        
-        // Update code content with fade effect
-        codeContent.style.opacity = '0';
-        
-        setTimeout(() => {
-            codeContent.innerHTML = formula.code.map(line => `<p>${line}</p>`).join('');
-            codeContent.style.opacity = '1';
-        }, 300);
-        
-        currentFormulaIndex = (currentFormulaIndex + 1) % financialFormulas.length;
-    }, 8000);
-}
-
-// Initialize code block rotation
-document.addEventListener('DOMContentLoaded', () => {
-    // Start code block rotation after a delay
-    setTimeout(updateCodeBlock, 5000);
 });
 
 // Add smooth transition for dashboard iframe loading
@@ -397,5 +420,4 @@ function handleIframeError() {
     }
 }
 
-// Initialize error handling
 document.addEventListener('DOMContentLoaded', handleIframeError);
