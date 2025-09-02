@@ -17,10 +17,9 @@
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#models" class="nav-link">Quant Models</a></li>
-                <li><a href="#live-models" class="nav-link">Live Dashboard</a></li>
                 <li><a href="#research" class="nav-link">Research</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#connect" class="nav-link">Connect</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -35,11 +34,17 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Hi, I'm <span class="highlight">Arnav Sharma</span></h1>
-                <h2 class="typing-text">Quantitative Researcher</h2>
-                <p>Passionate about financial markets, algorithmic trading, and building sophisticated quantitative models to decode market behavior and optimize investment strategies.</p>
+                <h2 class="typing-text">Quantitative Researcher & Financial Engineer</h2>
+                <p class="hero-description">Passionate about financial markets, algorithmic trading, and building sophisticated quantitative models to decode market behavior and optimize investment strategies.</p>
                 <div class="hero-buttons">
-                    <a href="#models" class="btn primary">View Quant Models</a>
-                    <a href="mailto:contact@arnavsharma.me" class="btn secondary">Collaborate</a>
+                    <a href="#models" class="btn primary">
+                        <i class="fas fa-chart-line"></i>
+                        View Quant Models
+                    </a>
+                    <a href="https://quant-finance-dashboard-arnavsharma.streamlit.app" target="_blank" class="btn secondary">
+                        <i class="fas fa-external-link-alt"></i>
+                        Live Dashboard
+                    </a>
                 </div>
                 <div class="social-links">
                     <a href="https://github.com/FREAKO01" target="_blank" aria-label="GitHub">
@@ -82,19 +87,48 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm a quantitative researcher and developer specializing in financial modeling, algorithmic trading, and risk management. My work focuses on creating sophisticated mathematical models to understand market dynamics, price derivatives, and develop systematic trading strategies.</p>
+                    <p class="about-intro">I'm a quantitative researcher and developer specializing in financial modeling, algorithmic trading, and risk management. Currently pursuing B.Com Honors at SRCC, I focus on creating sophisticated mathematical models to understand market dynamics, price derivatives, and develop systematic trading strategies.</p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Education</h4>
+                                <p>B.Com Honors at Shri Ram College of Commerce (SRCC)</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-target"></i>
+                            <div>
+                                <h4>Focus Areas</h4>
+                                <p>Quantitative Finance, Algorithmic Trading, Risk Management</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <h4>Technical Skills</h4>
+                                <p>Python, Financial Modeling, Statistical Analysis</p>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="stats-grid">
                         <div class="stat-item">
-                            <h3>8+</h3>
+                            <h3>12+</h3>
                             <p>Quant Models</p>
                         </div>
                         <div class="stat-item">
-                            <h3>1+</h3>
+                            <h3>2+</h3>
                             <p>Years Experience</p>
                         </div>
                         <div class="stat-item">
                             <h3>500+</h3>
                             <p>Backtests Run</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>95%</h3>
+                            <p>Academic Performance</p>
                         </div>
                     </div>
                 </div>
@@ -105,17 +139,20 @@
     <!-- Quantitative Models Section -->
     <section id="models" class="projects">
         <div class="container">
-            <h2 class="section-title">Quantitative Models</h2>
+            <h2 class="section-title">Quantitative Models Portfolio</h2>
+            <p class="section-subtitle">Comprehensive suite of financial models and trading algorithms</p>
+            
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card featured">
                     <div class="project-image">
                         <div class="project-placeholder">
                             <i class="fas fa-chart-line"></i>
                         </div>
+                        <div class="project-badge">Featured</div>
                     </div>
                     <div class="project-content">
-                        <h3>Black-Scholes Model</h3>
-                        <p>Complete implementation of the Black-Scholes option pricing model with Greeks calculation, volatility surface analysis, and real-time pricing for European options.</p>
+                        <h3>Black-Scholes Option Pricing Suite</h3>
+                        <p>Complete implementation of the Black-Scholes model with Greeks calculation, volatility surface analysis, and real-time pricing for European options with comprehensive risk metrics.</p>
                         <div class="project-tech">
                             <span>Python</span>
                             <span>NumPy</span>
@@ -124,9 +161,9 @@
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/FREAKO01/quant-finance-dashboard/blob/main/black_scholes_model.py" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
+                                <i class="fab fa-github"></i> Source Code
                             </a>
-                            <a href="https://quant-finance-dashboard-arnavsharma.streamlit.app" target="_blank" class="project-link">
+                            <a href="https://quant-finance-dashboard-arnavsharma.streamlit.app" target="_blank" class="project-link primary">
                                 <i class="fas fa-play"></i> Live Demo
                             </a>
                         </div>
@@ -153,7 +190,7 @@
                                 <i class="fab fa-github"></i> View Code
                             </a>
                             <a href="https://quant-finance-dashboard-arnavsharma.streamlit.app" target="_blank" class="project-link">
-                                <i class="fas fa-play"></i> Live Demo
+                                <i class="fas fa-external-link-alt"></i> Demo
                             </a>
                         </div>
                     </div>
@@ -179,7 +216,7 @@
                                 <i class="fab fa-github"></i> View Code
                             </a>
                             <a href="https://quant-finance-dashboard-arnavsharma.streamlit.app" target="_blank" class="project-link">
-                                <i class="fas fa-play"></i> Live Demo
+                                <i class="fas fa-external-link-alt"></i> Demo
                             </a>
                         </div>
                     </div>
@@ -205,7 +242,7 @@
                                 <i class="fab fa-github"></i> View Code
                             </a>
                             <a href="https://quant-finance-dashboard-arnavsharma.streamlit.app" target="_blank" class="project-link">
-                                <i class="fas fa-play"></i> Live Demo
+                                <i class="fas fa-external-link-alt"></i> Demo
                             </a>
                         </div>
                     </div>
@@ -218,20 +255,20 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Streamlit Finance App</h3>
-                        <p>Interactive financial analysis application with real-time data visualization, multiple quantitative models, and user-friendly interface for financial calculations.</p>
+                        <h3>Interactive Finance Dashboard</h3>
+                        <p>Comprehensive financial analysis application with real-time data visualization, multiple quantitative models, and user-friendly interface for financial calculations.</p>
                         <div class="project-tech">
-                            <span>Python</span>
                             <span>Streamlit</span>
                             <span>Pandas</span>
                             <span>Plotly</span>
+                            <span>Real-time Data</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/FREAKO01/quant-finance-dashboard/blob/main/streamlit_app.py" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
+                            <a href="https://github.com/FREAKO01/quant-finance-dashboard" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Repository
                             </a>
-                            <a href="https://quant-finance-dashboard-arnavsharma.streamlit.app" target="_blank" class="project-link">
-                                <i class="fas fa-play"></i> Live Demo
+                            <a href="https://quant-finance-dashboard-arnavsharma.streamlit.app" target="_blank" class="project-link primary">
+                                <i class="fas fa-rocket"></i> Launch App
                             </a>
                         </div>
                     </div>
@@ -247,93 +284,21 @@
                         <h3>Model Comparison Framework</h3>
                         <p>Comprehensive model comparison system for evaluating different quantitative finance models, performance metrics, and statistical analysis tools.</p>
                         <div class="project-tech">
-                            <span>Python</span>
                             <span>Statistical Analysis</span>
                             <span>Model Validation</span>
                             <span>Performance Metrics</span>
+                            <span>Backtesting</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/FREAKO01/quant-finance-dashboard/blob/main/model_comparison.py" target="_blank" class="project-link">
                                 <i class="fab fa-github"></i> View Code
                             </a>
                             <a href="https://quant-finance-dashboard-arnavsharma.streamlit.app" target="_blank" class="project-link">
-                                <i class="fas fa-play"></i> Live Demo
+                                <i class="fas fa-external-link-alt"></i> Demo
                             </a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Live Interactive Models Section -->
-    <section id="live-models" class="live-models">
-        <div class="container">
-            <h2 class="section-title">Live Interactive Dashboard</h2>
-            <p class="section-description">
-                Experience my quantitative finance models in real-time. Run Black-Scholes calculations, 
-                Monte Carlo simulations, and explore advanced option pricing models with live data visualization.
-            </p>
-            
-            <div class="dashboard-preview">
-                <div class="dashboard-embed">
-                    <iframe 
-                        src="https://quant-finance-dashboard-arnavsharma.streamlit.app" 
-                        width="100%" 
-                        height="700" 
-                        frameborder="0"
-                        scrolling="yes"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
-                    </iframe>
-                </div>
-                
-                <div class="dashboard-overlay">
-                    <div class="overlay-content">
-                        <h3>Interactive Quant Models</h3>
-                        <p>Click to explore live calculations</p>
-                        <a href="https://quant-finance-dashboard-arnavsharma.streamlit.app" 
-                           target="_blank" class="overlay-btn">
-                            Launch Full Dashboard
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="model-features">
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <i class="fas fa-calculator"></i>
-                        <h4>Black-Scholes Model</h4>
-                        <p>Real-time option pricing with Greeks calculation</p>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-dice"></i>
-                        <h4>Monte Carlo Simulation</h4>
-                        <p>Stochastic modeling with path visualization</p>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-chart-line"></i>
-                        <h4>Live Visualization</h4>
-                        <p>Interactive charts and parameter controls</p>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-balance-scale"></i>
-                        <h4>Model Comparison</h4>
-                        <p>Side-by-side analysis of different approaches</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="dashboard-actions">
-                <a href="https://quant-finance-dashboard-arnavsharma.streamlit.app" 
-                   target="_blank" class="btn primary dashboard-btn">
-                    <i class="fas fa-rocket"></i> Launch Interactive Dashboard
-                </a>
-                <a href="https://github.com/FREAKO01/quant-finance-dashboard" 
-                   target="_blank" class="btn secondary">
-                    <i class="fab fa-github"></i> View Source Code
-                </a>
             </div>
         </div>
     </section>
@@ -342,36 +307,85 @@
     <section id="research" class="achievements">
         <div class="container">
             <h2 class="section-title">Research & Expertise</h2>
+            <p class="section-subtitle">Specialized knowledge in quantitative finance and computational methods</p>
+            
             <div class="achievements-grid">
                 <div class="achievement-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Options Pricing</h3>
-                    <p>Black-Scholes, Heston, and exotic options modeling with advanced numerical methods</p>
+                    <div class="achievement-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Options Pricing Models</h3>
+                    <p>Black-Scholes, Heston, and exotic options modeling with advanced numerical methods and calibration techniques</p>
+                    <div class="achievement-tags">
+                        <span>Black-Scholes</span>
+                        <span>Exotic Options</span>
+                        <span>Greeks</span>
+                    </div>
                 </div>
+
                 <div class="achievement-card">
-                    <i class="fas fa-wave-square"></i>
+                    <div class="achievement-icon">
+                        <i class="fas fa-wave-square"></i>
+                    </div>
                     <h3>Volatility Modeling</h3>
-                    <p>Stochastic volatility models, GARCH, and volatility surface construction</p>
+                    <p>Stochastic volatility models, GARCH implementations, and volatility surface construction with real market data</p>
+                    <div class="achievement-tags">
+                        <span>Stochastic Vol</span>
+                        <span>GARCH</span>
+                        <span>Vol Surface</span>
+                    </div>
                 </div>
+
                 <div class="achievement-card">
-                    <i class="fas fa-dice"></i>
+                    <div class="achievement-icon">
+                        <i class="fas fa-dice"></i>
+                    </div>
                     <h3>Monte Carlo Methods</h3>
-                    <p>Advanced simulation techniques with variance reduction and parallel computing</p>
+                    <p>Advanced simulation techniques with variance reduction, parallel computing, and path-dependent pricing</p>
+                    <div class="achievement-tags">
+                        <span>Variance Reduction</span>
+                        <span>Parallel Computing</span>
+                        <span>Path Simulation</span>
+                    </div>
                 </div>
+
                 <div class="achievement-card">
-                    <i class="fas fa-robot"></i>
-                    <h3>Interactive Applications</h3>
-                    <p>User-friendly financial tools and interactive dashboards for real-time analysis</p>
+                    <div class="achievement-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Algorithmic Trading</h3>
+                    <p>Systematic trading strategies for Indian markets with comprehensive backtesting and risk management</p>
+                    <div class="achievement-tags">
+                        <span>Nifty 50</span>
+                        <span>Backtesting</span>
+                        <span>Risk Management</span>
+                    </div>
                 </div>
+
                 <div class="achievement-card">
-                    <i class="fas fa-balance-scale"></i>
-                    <h3>Model Comparison</h3>
-                    <p>Statistical validation, performance metrics, and comprehensive model evaluation</p>
+                    <div class="achievement-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Model Validation</h3>
+                    <p>Statistical validation, performance metrics, and comprehensive model evaluation frameworks</p>
+                    <div class="achievement-tags">
+                        <span>Statistical Tests</span>
+                        <span>Performance Metrics</span>
+                        <span>Model Selection</span>
+                    </div>
                 </div>
+
                 <div class="achievement-card">
-                    <i class="fas fa-brain"></i>
-                    <h3>Local Volatility</h3>
-                    <p>Advanced volatility modeling with local volatility surfaces and calibration techniques</p>
+                    <div class="achievement-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Financial Engineering</h3>
+                    <p>Derivative structuring, risk analytics, and portfolio optimization using modern portfolio theory</p>
+                    <div class="achievement-tags">
+                        <span>Derivatives</span>
+                        <span>Risk Analytics</span>
+                        <span>Portfolio Theory</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -380,105 +394,284 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
+            <h2 class="section-title">Technical Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Programming Languages</h3>
+                    <div class="skill-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Programming Languages</h3>
+                    </div>
                     <div class="skill-items">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">R</span>
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">MATLAB</span>
-                        <span class="skill-tag">JavaScript</span>
+                        <div class="skill-tag advanced">Python</div>
+                        <div class="skill-tag intermediate">R</div>
+                        <div class="skill-tag intermediate">C++</div>
+                        <div class="skill-tag advanced">SQL</div>
+                        <div class="skill-tag beginner">MATLAB</div>
+                        <div class="skill-tag intermediate">JavaScript</div>
                     </div>
                 </div>
+
                 <div class="skill-category">
-                    <h3>Quantitative Libraries</h3>
+                    <div class="skill-header">
+                        <i class="fas fa-calculator"></i>
+                        <h3>Quantitative Libraries</h3>
+                    </div>
                     <div class="skill-items">
-                        <span class="skill-tag">NumPy</span>
-                        <span class="skill-tag">SciPy</span>
-                        <span class="skill-tag">Pandas</span>
-                        <span class="skill-tag">QuantLib</span>
-                        <span class="skill-tag">Streamlit</span>
-                        <span class="skill-tag">Plotly</span>
+                        <div class="skill-tag advanced">NumPy</div>
+                        <div class="skill-tag advanced">SciPy</div>
+                        <div class="skill-tag advanced">Pandas</div>
+                        <div class="skill-tag intermediate">QuantLib</div>
+                        <div class="skill-tag advanced">Streamlit</div>
+                        <div class="skill-tag advanced">Plotly</div>
                     </div>
                 </div>
+
                 <div class="skill-category">
-                    <h3>Financial Modeling</h3>
+                    <div class="skill-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Financial Modeling</h3>
+                    </div>
                     <div class="skill-items">
-                        <span class="skill-tag">Black-Scholes</span>
-                        <span class="skill-tag">Monte Carlo</span>
-                        <span class="skill-tag">Heston Model</span>
-                        <span class="skill-tag">Local Volatility</span>
-                        <span class="skill-tag">Options Pricing</span>
-                        <span class="skill-tag">Risk Modeling</span>
+                        <div class="skill-tag advanced">Black-Scholes</div>
+                        <div class="skill-tag advanced">Monte Carlo</div>
+                        <div class="skill-tag intermediate">Heston Model</div>
+                        <div class="skill-tag intermediate">Local Volatility</div>
+                        <div class="skill-tag advanced">Options Pricing</div>
+                        <div class="skill-tag advanced">Risk Modeling</div>
                     </div>
                 </div>
+
                 <div class="skill-category">
-                    <h3>Data & Visualization</h3>
+                    <div class="skill-header">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>Data & Analytics</h3>
+                    </div>
                     <div class="skill-items">
-                        <span class="skill-tag">Matplotlib</span>
-                        <span class="skill-tag">Plotly</span>
-                        <span class="skill-tag">Seaborn</span>
-                        <span class="skill-tag">Interactive Dashboards</span>
-                        <span class="skill-tag">Statistical Analysis</span>
-                        <span class="skill-tag">Model Validation</span>
+                        <div class="skill-tag advanced">Data Visualization</div>
+                        <div class="skill-tag advanced">Statistical Analysis</div>
+                        <div class="skill-tag advanced">Model Validation</div>
+                        <div class="skill-tag intermediate">Machine Learning</div>
+                        <div class="skill-tag advanced">Backtesting</div>
+                        <div class="skill-tag intermediate">Time Series</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Connect Section -->
+    <section id="connect" class="connect">
         <div class="container">
-            <h2 class="section-title">Let's Collaborate</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Ready to Build Something Great?</h3>
-                    <p>I'm always interested in discussing quantitative finance, algorithmic trading strategies, and innovative financial modeling projects. Let's connect and explore opportunities.</p>
-                    <div class="contact-methods">
-                        <a href="mailto:contact@arnavsharma.me" class="contact-method">
+            <h2 class="section-title">Let's Connect & Collaborate</h2>
+            <p class="section-subtitle">Interested in quantitative finance, algorithmic trading, or innovative financial modeling projects?</p>
+            
+            <div class="connect-content">
+                <div class="connect-cards">
+                    <div class="connect-card email-card" onclick="openEmailModal()">
+                        <div class="connect-icon">
                             <i class="fas fa-envelope"></i>
-                            <span>contact@arnavsharma.me</span>
-                        </a>
-                        <a href="https://github.com/FREAKO01" target="_blank" class="contact-method">
-                            <i class="fab fa-github"></i>
-                            <span>github.com/FREAKO01</span>
-                        </a>
-                        <a href="https://linkedin.com/in/arnav-sharma" target="_blank" class="contact-method">
+                        </div>
+                        <h3>Send Email</h3>
+                        <p>Direct communication for professional inquiries and collaboration opportunities</p>
+                        <span class="connect-action">Click to compose</span>
+                    </div>
+
+                    <div class="connect-card linkedin-card" onclick="window.open('https://linkedin.com/in/arnav-sharma', '_blank')">
+                        <div class="connect-icon">
                             <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn Profile</span>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <p>Professional networking and career opportunities in quantitative finance</p>
+                        <span class="connect-action">View profile</span>
+                    </div>
+
+                    <div class="connect-card github-card" onclick="window.open('https://github.com/FREAKO01', '_blank')">
+                        <div class="connect-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>GitHub</h3>
+                        <p>Explore my quantitative models, trading algorithms, and open source contributions</p>
+                        <span class="connect-action">View repositories</span>
+                    </div>
+
+                    <div class="connect-card calendar-card" onclick="openCalendarModal()">
+                        <div class="connect-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3>Schedule Meeting</h3>
+                        <p>Book a 30-minute discussion about quant finance, trading strategies, or collaboration</p>
+                        <span class="connect-action">Schedule now</span>
+                    </div>
+                </div>
+
+                <div class="quick-contact">
+                    <h3>Quick Contact</h3>
+                    <div class="contact-options">
+                        <a href="mailto:contact@arnavsharma.me?subject=Collaboration Opportunity" class="contact-option">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Send Quick Email</span>
+                        </a>
+                        <a href="https://quant-finance-dashboard-arnavsharma.streamlit.app" target="_blank" class="contact-option">
+                            <i class="fas fa-rocket"></i>
+                            <span>Try Live Dashboard</span>
                         </a>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="subject" placeholder="Subject (e.g., Collaboration Opportunity)" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Tell me about your project or collaboration idea..." rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn primary">Send Message</button>
-                </form>
             </div>
         </div>
     </section>
+
+    <!-- Email Modal -->
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Send me an email</h3>
+                <span class="close" onclick="closeEmailModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Choose how you'd like to reach out:</p>
+                <div class="email-options">
+                    <a href="mailto:contact@arnavsharma.me?subject=Collaboration%20Opportunity&body=Hi%20Arnav%2C%0A%0AI'm%20interested%20in%20discussing...%0A%0ABest%20regards%2C" class="email-option">
+                        <i class="fas fa-briefcase"></i>
+                        <div>
+                            <h4>Professional Inquiry</h4>
+                            <p>Collaboration, job opportunities, or business discussions</p>
+                        </div>
+                    </a>
+                    <a href="mailto:contact@arnavsharma.me?subject=Quantitative%20Finance%20Discussion&body=Hi%20Arnav%2C%0A%0AI'd%20like%20to%20discuss%20your%20quantitative%20models...%0A%0ABest%20regards%2C" class="email-option">
+                        <i class="fas fa-chart-line"></i>
+                        <div>
+                            <h4>Technical Discussion</h4>
+                            <p>Questions about models, algorithms, or technical implementations</p>
+                        </div>
+                    </a>
+                    <a href="mailto:contact@arnavsharma.me?subject=General%20Inquiry&body=Hi%20Arnav%2C%0A%0A%0A%0ABest%20regards%2C" class="email-option">
+                        <i class="fas fa-comments"></i>
+                        <div>
+                            <h4>General Inquiry</h4>
+                            <p>Other questions or casual conversation</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calendar Modal -->
+    <div id="calendarModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Schedule a Meeting</h3>
+                <span class="close" onclick="closeCalendarModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>I'd love to discuss quantitative finance, trading strategies, or potential collaborations. Choose a meeting type:</p>
+                <div class="meeting-options">
+                    <div class="meeting-option">
+                        <i class="fas fa-video"></i>
+                        <div>
+                            <h4>Virtual Coffee Chat (30 min)</h4>
+                            <p>Casual discussion about finance, career, or projects</p>
+                            <a href="mailto:contact@arnavsharma.me?subject=Meeting%20Request%20-%20Virtual%20Coffee%20Chat&body=Hi%20Arnav%2C%0A%0AI'd%20like%20to%20schedule%20a%2030-minute%20virtual%20coffee%20chat.%0A%0APreferred%20dates%2Ftimes%3A%0A-%20%0A-%20%0A%0ATopic%20of%20discussion%3A%0A%0ABest%20regards%2C" class="btn-schedule">Request Meeting</a>
+                        </div>
+                    </div>
+                    <div class="meeting-option">
+                        <i class="fas fa-handshake"></i>
+                        <div>
+                            <h4>Professional Consultation (45 min)</h4>
+                            <p>In-depth discussion about quantitative models or collaboration</p>
+                            <a href="mailto:contact@arnavsharma.me?subject=Meeting%20Request%20-%20Professional%20Consultation&body=Hi%20Arnav%2C%0A%0AI'd%20like%20to%20schedule%20a%2045-minute%20professional%20consultation.%0A%0APreferred%20dates%2Ftimes%3A%0A-%20%0A-%20%0A%0AProject%2FTopic%3A%0A%0AExpected%20outcomes%3A%0A%0ABest%20regards%2C" class="btn-schedule">Request Consultation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="availability-note">
+                    <i class="fas fa-clock"></i>
+                    <p><strong>Availability:</strong> Weekdays 2:00 PM - 6:00 PM IST, Weekends flexible</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Arnav Sharma. Quantitative Research & Financial Modeling.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Arnav Sharma</h4>
+                    <p>Quantitative Research & Financial Engineering</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#models">Quant Models</a>
+                    <a href="#research">Research</a>
+                    <a href="https://quant-finance-dashboard-arnavsharma.streamlit.app" target="_blank">Live Dashboard</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <a href="mailto:contact@arnavsharma.me">Email</a>
+                    <a href="https://github.com/FREAKO01" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/arnav-sharma" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Arnav Sharma. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Email Modal Functions
+        function openEmailModal() {
+            document.getElementById('emailModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeEmailModal() {
+            document.getElementById('emailModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Calendar Modal Functions
+        function openCalendarModal() {
+            document.getElementById('calendarModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCalendarModal() {
+            document.getElementById('calendarModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modals when clicking outside
+        window.onclick = function(event) {
+            const emailModal = document.getElementById('emailModal');
+            const calendarModal = document.getElementById('calendarModal');
+            
+            if (event.target == emailModal) {
+                closeEmailModal();
+            }
+            if (event.target == calendarModal) {
+                closeCalendarModal();
+            }
+        }
+
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }));
+        });
+    </script>
 </body>
 </html>
