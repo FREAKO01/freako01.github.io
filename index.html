@@ -267,71 +267,75 @@
     </section>
 
 <!-- Resume Section -->
-<section id="resume" class="resume-section">
+<section id="resume" class="live-models">
     <div class="container">
         <h2 class="section-title">Resume</h2>
         <p class="section-description">
             Download my resume to learn more about my education, experience in quantitative finance, 
-            and technical skills. Available in multiple formats for your convenience.
+            and technical skills.
         </p>
         
-        <div class="resume-preview">
-            <div class="resume-embed">
-                <iframe 
-                    src="resume/Arnav_Sharma_Resume.pdf" 
-                    width="100%" 
-                    height="700" 
-                    frameborder="0"
-                    scrolling="yes">
-                </iframe>
-            </div>
-            
-            <div class="resume-overlay">
-                <div class="overlay-content">
-                    <h3>View Full Resume</h3>
-                    <p>Click to open in new tab</p>
-                    <a href="resume/Arnav_Sharma_Resume.pdf" 
-                       target="_blank" class="overlay-btn">
-                        Open Resume
-                    </a>
-                </div>
-            </div>
+        <!-- Primary Action Buttons - Moved to Top -->
+        <div class="resume-actions-top">
+            <a href="./resume/Arnav_Sharma_Resume.pdf" 
+               download="Arnav_Sharma_Resume.pdf" 
+               class="btn primary dashboard-btn">
+                <i class="fas fa-download"></i> Download Resume
+            </a>
+            <a href="./resume/Arnav_Sharma_Resume.pdf" 
+               target="_blank" 
+               class="btn secondary">
+                <i class="fas fa-external-link-alt"></i> Open in New Tab
+            </a>
+            <a href="https://www.linkedin.com/in/yourprofile" 
+               target="_blank" 
+               class="btn secondary">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
         </div>
         
-        <div class="resume-highlights">
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <i class="fas fa-graduation-cap"></i>
+        <!-- Clean Resume Preview - No Overlay -->
+        <div class="resume-preview-clean">
+            <iframe 
+                src="./resume/Arnav_Sharma_Resume.pdf" 
+                width="100%" 
+                height="800" 
+                frameborder="0"
+                scrolling="yes"
+                title="Arnav Sharma Resume">
+            </iframe>
+        </div>
+        
+        <!-- Simplified Highlights Grid -->
+        <div class="resume-highlights-grid">
+            <div class="highlight-item">
+                <i class="fas fa-graduation-cap"></i>
+                <div class="highlight-content">
                     <h4>Education</h4>
                     <p>BCom Honours, SRCC Delhi</p>
                 </div>
-                <div class="feature-card">
-                    <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="highlight-item">
+                <i class="fas fa-chart-line"></i>
+                <div class="highlight-content">
                     <h4>Quantitative Finance</h4>
                     <p>Algorithmic trading & financial modeling</p>
                 </div>
-                <div class="feature-card">
-                    <i class="fas fa-code"></i>
+            </div>
+            <div class="highlight-item">
+                <i class="fas fa-code"></i>
+                <div class="highlight-content">
                     <h4>Technical Skills</h4>
                     <p>Python, JavaScript, Financial Analytics</p>
                 </div>
-                <div class="feature-card">
-                    <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="highlight-item">
+                <i class="fas fa-briefcase"></i>
+                <div class="highlight-content">
                     <h4>Experience</h4>
-                    <p>Quant projects & web development</p>
+                    <p>E-commerce & quantitative projects</p>
                 </div>
             </div>
-        </div>
-        
-        <div class="resume-actions">
-            <a href="resume/Arnav_Sharma_Resume.pdf" 
-               download="Arnav_Sharma_Resume.pdf" class="btn primary resume-btn">
-                <i class="fas fa-download"></i> Download Resume (PDF)
-            </a>
-            <a href="https://www.linkedin.com/in/yourprofile" 
-               target="_blank" class="btn secondary">
-                <i class="fab fa-linkedin"></i> View LinkedIn Profile
-            </a>
         </div>
     </div>
 </section>
